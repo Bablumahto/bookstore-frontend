@@ -17,7 +17,7 @@ function Favourites() {
       setFavouriteBook(response.data.data);
     };
     fetch();
-  }, [FavouriteBook]);
+  });
   return (
     <>
       <div className=" grid md:grid-cols-4 gap-5 mx-2">

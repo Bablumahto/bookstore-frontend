@@ -26,7 +26,7 @@ function Cart() {
       setCart(response.data.data);
     };
     fetch();
-  }, [Cart]);
+  });
 
   // total in cart
   useEffect(() => {
