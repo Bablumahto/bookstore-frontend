@@ -105,7 +105,7 @@ function Cart() {
                       {items.desc.slice(0, 30)}..
                     </p>
                     <p className="text-normal text-zinc-300 mt-2 block md:hidden">
-                      {items.desc.slice(items.desc.slice(0, 100))}
+                      {items.desc.slice(0, 100)}
                     </p>
                   </div>
                   <div className="flex mt-4 w-full  md:w-auto items-center justify-between">
@@ -113,7 +113,7 @@ function Cart() {
                       {items.price}
                     </h2>
                     <button
-                      className="bg-red-100 text-red-700 border-red-700 rounded  p-2 ms-12"
+                      className="bg-red-100 text-red-700 border-red-700 rounded p-2 ms-12"
                       onClick={() => deleteItem(items._id)}
                     >
                       <AiFillDelete />
