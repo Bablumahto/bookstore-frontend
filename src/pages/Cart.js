@@ -86,42 +86,44 @@ function Cart() {
             <h1 className="text-5xl font-semibold text-zinc-500 mb-8 text-center">
               your cart
             </h1>
-            {Cart.map((items, i) => (
-              <div className="mx-4" key={i}>
-                <div className="w-full my-4 rounded flex flex-col md:flex-row p-4 bg-zinc-800 justify-between items-center px-4">
-                  <img
-                    src={items.url}
-                    alt="/"
-                    className="h-[20vh] md:h-[10vh] object-cover"
-                  />
-                  <div className="w-full md:w-auto">
-                    <h1 className="text-2xl text-zinc-100 font-semibold text-start mt-2 md:mt-0">
-                      {items.title}
-                    </h1>
-                    <p className="text-normal text-zinc-300 mt-2 hidden lg:block">
-                      {items.desc.slice(0, 100)}...
-                    </p>
-                    <p className="text-normal text-zinc-300 mt-2 hidden  md:block lg:hidden">
-                      {items.desc.slice(0, 30)}..
-                    </p>
-                    <p className="text-normal text-zinc-300 mt-2 block md:hidden">
-                      {items.desc.slice(0, 100)}
-                    </p>
-                  </div>
-                  <div className="flex mt-4 w-full  md:w-auto items-center justify-between">
-                    <h2 className="text-zinc-100 text-3xl flex font-semibold">
-                      {items.price}
-                    </h2>
-                    <button
-                      className="bg-red-100 text-red-700 border-red-700 rounded p-2 ms-12"
-                      onClick={() => deleteItem(items._id)}
-                    >
-                      <AiFillDelete />
-                    </button>
+            {Cart.map((items, i) => {
+              return (
+                <div className="mx-4" key={i}>
+                  <div className="w-full my-4 rounded flex flex-col md:flex-row p-4 bg-zinc-800 justify-between items-center px-4">
+                    <img
+                      src={items.url}
+                      alt="/"
+                      className="h-[20vh] md:h-[10vh] object-cover"
+                    />
+                    <div className="w-full md:w-auto">
+                      <h1 className="text-2xl text-zinc-100 font-semibold text-start mt-2 md:mt-0">
+                        {items.title}
+                      </h1>
+                      <p className="text-normal text-zinc-300 mt-2 hidden lg:block">
+                        {items.desc.slice(0, 100)}...
+                      </p>
+                      <p className="text-normal text-zinc-300 mt-2 hidden  md:block lg:hidden">
+                        {items.desc.slice(0, 30)}..
+                      </p>
+                      <p className="text-normal text-zinc-300 mt-2 block md:hidden">
+                        {items.desc.slice(0, 100)}
+                      </p>
+                    </div>
+                    <div className="flex mt-4 w-full md:w-auto items-center justify-between">
+                      <h2 className="text-zinc-100 text-3xl flex font-semibold">
+                        {items.price}
+                      </h2>
+                      <button
+                        className="bg-red-100 text-red-700 border-red-700 rounded p-2 ms-12"
+                        onClick={() => deleteItem(items._id)}
+                      >
+                        <AiFillDelete />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
             {Cart && Cart.length > 0 && (
               <div className="mt-4 w-full  flex items-center justify-end pr-4">
