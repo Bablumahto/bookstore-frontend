@@ -16,7 +16,7 @@ function BookCard({ data, Favourite }) {
       {},
       { headers }
     );
-    alert("want to remove from favourite?");
+    alert(response.data.message);
   };
   return (
     <div className="bg-zinc-800  items-center">

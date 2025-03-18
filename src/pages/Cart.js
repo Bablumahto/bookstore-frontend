@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const [Cart, setCart] = useState();

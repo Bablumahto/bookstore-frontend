@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Loader from "./../components/Loader";
+
 import { FaCheck, FaUserLarge } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { IoOpenOutline } from "react-icons/io5";

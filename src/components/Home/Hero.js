@@ -23,7 +23,7 @@ function Hero() {
         </div>
       </div>
       <div className="lg:w-3/6 w-full md:h-[100%]  items-center justify-center sm:items-center">
-        <img src="book.png" alt="book store image" className="object-cover" />
+        <img src="book.png" alt="book" className="object-cover" />
       </div>
     </div>
   );
