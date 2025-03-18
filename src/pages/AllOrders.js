@@ -27,7 +27,7 @@ function AllOrders() {
       // console.log(response);
     };
     fetch();
-  }, []);
+  });
 
   // change
   const change = (e) => {
@@ -112,7 +112,7 @@ function AllOrders() {
                         <div className="text-green-500">{items.status}</div>
                       )}
                     </button>
-                    <div className={`${Options == i ? "flex" : "hidden"}`}>
+                    <div className={`${Options === i ? "flex" : "hidden"}`}>
                       <select
                         name="status"
                         id=""

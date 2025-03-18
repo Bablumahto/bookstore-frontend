@@ -24,7 +24,7 @@ function ViewBookDetail() {
       setData(response.data.data);
     };
     fetch();
-  }, []);
+  });
 
   // headers
   const headers = {

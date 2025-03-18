@@ -17,7 +17,7 @@ function UserOrderHistory() {
       console.log(res);
     };
     fetch();
-  }, []);
+  });
 
   return (
     <>

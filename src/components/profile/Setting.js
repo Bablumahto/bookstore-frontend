@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { resolvePath } from "react-router-dom";
 
 function Setting() {
   const [value, setValue] = useState({ address: "" });
@@ -25,7 +24,7 @@ function Setting() {
       setValue({ address: response.data.address });
     };
     fetch();
-  }, []);
+  });
 
   // suvmit button
   const submitAddress = async () => {

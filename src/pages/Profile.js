@@ -21,7 +21,7 @@ function Profile() {
       setProfile(response.data);
     };
     fetch();
-  }, []);
+  });
   return (
     <div className="bg-zinc-900 px-2 md:px-12 flex flex-col md:flex-row h-screen py-8 text-white gap-4 ">
       {profile && (

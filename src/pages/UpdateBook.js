@@ -69,7 +69,7 @@ export default function UpdateBook() {
       setData(response.data.data);
     };
     fetch();
-  }, []);
+  });
   return (
     <>
       <div className="h-[100%] p-0 md:p-4 bg-zinc-900">

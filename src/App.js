@@ -34,7 +34,7 @@ function App() {
 
       dispatch(authActions.changeRole(localStorage.getItem("role")));
     }
-  }, []);
+  });
   return (
     <>
       <Header></Header>
