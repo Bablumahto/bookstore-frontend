@@ -7,7 +7,7 @@ function RecentlyAdded() {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "http://localhost:8080/api/v1/get-recent-books"
+        "https://bookstore-x9oa.onrender.com/api/v1/get-recent-books"
       );
       setData(response.data.data);
     };

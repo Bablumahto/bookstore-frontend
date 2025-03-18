@@ -25,7 +25,7 @@ function SignUp() {
         alert("all fields are required");
       } else {
         const response = await axios.post(
-          "http://localhost:8080/api/v1/register",
+          "https://bookstore-x9oa.onrender.com/api/v1/register",
           values
         );
         console.log(response);

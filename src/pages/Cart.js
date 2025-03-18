@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Loader from "./../components/Loader";
+
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -18,7 +18,7 @@ function Cart() {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/get-user-cart`,
+        `https://bookstore-x9oa.onrender.com/api/v1/get-user-cart`,
         {
           headers,
         }
@@ -42,7 +42,7 @@ function Cart() {
 
   const deleteItem = async (bookid) => {
     const response = await axios.put(
-      `http://localhost:8080/api/v1/remove-from-cart/${bookid}`,
+      `https://bookstore-x9oa.onrender.com/api/v1/remove-from-cart/${bookid}`,
       {},
       {
         headers,
@@ -55,7 +55,7 @@ function Cart() {
   const placeOrder = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/v1/place-order`,
+        `https://bookstore-x9oa.onrender.com/api/v1/place-order`,
         { order: Cart },
         { headers }
       );

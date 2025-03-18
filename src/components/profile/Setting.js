@@ -18,7 +18,7 @@ function Setting() {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/get-user-information`,
+        `https://bookstore-x9oa.onrender.com/api/v1/get-user-information`,
         { headers }
       );
       setProfileData(response.data);
@@ -30,7 +30,7 @@ function Setting() {
   // suvmit button
   const submitAddress = async () => {
     const response = await axios.put(
-      `http://localhost:8080/api/v1/update-address`,
+      `https://bookstore-x9oa.onrender.com/api/v1/update-address`,
       value,
       {
         headers,

@@ -20,7 +20,7 @@ function AllOrders() {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/get-all-orders`,
+        `https://bookstore-x9oa.onrender.com/api/v1/get-all-orders`,
         { headers }
       );
       setAllOrder(response.data.data);
@@ -39,7 +39,7 @@ function AllOrders() {
   const submitChanges = async (i) => {
     const id = Allorder[i]._id;
     const response = await axios.put(
-      `http://localhost:8080/api/v1/update-status/${id}`,
+      `https://bookstore-x9oa.onrender.com/api/v1/update-status/${id}`,
       values,
       { headers }
     );
