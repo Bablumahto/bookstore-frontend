@@ -20,14 +20,7 @@ function AllBook() {
       </h4>
       {!Data && <div className="flex items-center justify-center"></div>}
       <div className=" my-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {Data &&
-          Data.map((items, i) => {
-            return (
-              <div key={i}>
-                <BookCard data={items} />
-              </div>
-            );
-          })}
+        {Data && Data.map((item) => <BookCard key={item.id} data={item} />)}
       </div>
     </div>
   );

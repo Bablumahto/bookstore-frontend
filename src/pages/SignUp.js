@@ -84,7 +84,7 @@ function SignUp() {
                 placeholder=" password"
                 name=" password"
                 required
-                value={values.passwordl}
+                value={values.password}
                 onChange={change}
               />
             </div>

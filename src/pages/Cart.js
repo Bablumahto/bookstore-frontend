@@ -87,7 +87,7 @@ function Cart() {
               your cart
             </h1>
             {Cart.map((items, i) => (
-              <div className="mx-4" key={items._id}>
+              <div className="mx-4" key={i}>
                 <div className="w-full my-4 rounded flex flex-col md:flex-row p-4 bg-zinc-800 justify-between items-center px-4">
                   <img
                     src={items.url}
