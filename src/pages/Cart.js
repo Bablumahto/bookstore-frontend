@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Cart() {
-  const [Cart, setCart] = useState();
+  const [Cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ function Cart() {
       setCart(response.data.data);
     };
     fetch();
-  });
+  }, []);
 
   // total in cart
   useEffect(() => {
