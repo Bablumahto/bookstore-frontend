@@ -26,14 +26,14 @@ function Cart() {
       setCart(response.data.data);
     };
     fetch();
-  }, []);
+  });
 
   // total in cart
   useEffect(() => {
     if (Cart && Cart.length > 0) {
       let total = 0;
       Cart.map((itmes) => {
-        total += itmes.price;
+        return (total += itmes.price);
       });
       setTotal(total);
       total = 0;
